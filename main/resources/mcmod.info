@@ -1,14 +1,14 @@
 [
 {
   "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "name": "ExampleMod",
+  "description": "Essentials like add awesome commands.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "https://www.horizonbagel.com/awesomecommandplus",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["mk499490"],
+  "credits": "GNU GPL v3 - https://www.gnu.org/licenses/gpl-3.0.ja.html",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

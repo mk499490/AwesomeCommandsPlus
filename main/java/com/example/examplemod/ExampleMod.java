@@ -1,5 +1,6 @@
 package com.example.examplemod;
 
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -8,7 +9,6 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
@@ -18,10 +18,19 @@ import net.minecraftforge.common.MinecraftForge;
 public class ExampleMod
 {
     public static final String MODID = "examplemod";
-    public static final String VERSION = "1.0";
+    public static final String VERSION = "1.0a";
+
     public static final Block RAINBOW = new BlockRainbow();
     public static final Block blocksound = new BlockSound();
-    
+
+    @EventHandler
+    public void serverStart(FMLServerStartingEvent event){
+        event.registerServerCommand(new CommandSpawn());
+        event.registerServerCommand(new CommandBack());
+        event.registerServerCommand(new CommandHome());
+        event.registerServerCommand(new CommandSetHome());
+    }
+
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
@@ -83,6 +92,7 @@ public class ExampleMod
 
         GameRegistry.registerItem(new ItemModFood("PoisonusOnigiri", "Onigiri", 1, 0.5f, false, poisonusOnigiri).setAlwaysEdible(), "PoisonusOnigiri");
         MinecraftForge.EVENT_BUS.register(new EntityExplodeEventHandler());
+        MinecraftForge.EVENT_BUS.register(new EntityDeathEventHandler());
         MinecraftForge.EVENT_BUS.register(new BlockBreakEventHandler());
     }
 }
