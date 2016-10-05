@@ -1,0 +1,15 @@
+{
+  "Sound0": {
+    "category":"master",
+    "sounds": [
+      {
+        "name"  :"Sound0",
+        "type"  :"sound",
+        "weight":1,
+        "volume":1,
+        "pitch" :1,
+        "stream":true
+      }
+    ]
+  }
+}

@@ -4,3 +4,7 @@ item.Onigiri.name=おにぎり
 item.PoisonusOnigiri.name=おにぎり?
 tile.examplemodBlockRainbow.name=にじいろぶろっく
 tile.examplemod_blocksound.name=さうんどぶろっく
+text.blockSound.changedToThe1stSong=1番目の曲に変更しました
+text.blockSound.changedToThe2ndSong=2番目の曲に変更しました
+text.blockSound.changedToThe3rdSong=3番目の曲に変更しました
+text.hogehoge=ほげほげ

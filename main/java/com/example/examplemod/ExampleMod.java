@@ -12,6 +12,7 @@ import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid = ExampleMod.MODID, version = ExampleMod.VERSION)
 public class ExampleMod
@@ -25,6 +26,7 @@ public class ExampleMod
     public void init(FMLInitializationEvent event)
     {
 		// some example code
+
         //ダイヤブロック
         GameRegistry.addRecipe(new ItemStack(Blocks.diamond_block),
                 "AAA",
@@ -80,5 +82,7 @@ public class ExampleMod
         };
 
         GameRegistry.registerItem(new ItemModFood("PoisonusOnigiri", "Onigiri", 1, 0.5f, false, poisonusOnigiri).setAlwaysEdible(), "PoisonusOnigiri");
+        MinecraftForge.EVENT_BUS.register(new EntityExplodeEventHandler());
+        MinecraftForge.EVENT_BUS.register(new BlockBreakEventHandler());
     }
 }
