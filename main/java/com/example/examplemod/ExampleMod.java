@@ -1,8 +1,10 @@
 package com.example.examplemod;
 
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
 import net.minecraft.init.Blocks;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -13,6 +15,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.common.MinecraftForge;
+
+import java.io.*;
+import java.util.HashMap;
 
 @Mod(modid = ExampleMod.MODID, version = ExampleMod.VERSION)
 public class ExampleMod
@@ -63,6 +68,8 @@ public class ExampleMod
         GameRegistry.addShapelessRecipe(new ItemStack(RAINBOW), new ItemStack(Blocks.dirt)); //アイテムの数だけ指定している
     }
 
+
+
     public void customSword() {
         Item sword = new MyItem();
         GameRegistry.registerItem(sword, "my_sword");
@@ -94,5 +101,56 @@ public class ExampleMod
         MinecraftForge.EVENT_BUS.register(new EntityExplodeEventHandler());
         MinecraftForge.EVENT_BUS.register(new EntityDeathEventHandler());
         MinecraftForge.EVENT_BUS.register(new BlockBreakEventHandler());
+    }
+
+    public static File dir;
+    public static HashMap<String, Object> config;
+
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event){
+        dir = event.getModConfigurationDirectory();
+        if(!dir.exists()){
+            dir.mkdirs();
+        }
+        File file = new File(dir, "conf.conf");
+        if(file.exists()){
+            ObjectInputStream ois = null;
+            try {
+                ois = new ObjectInputStream(new FileInputStream(file));
+                config = (HashMap<String, Object>) ois.readObject();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }finally {
+                if (ois != null) {
+                    try {
+                        ois.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        } else {
+            config = new HashMap<String, Object>();
+        }
+    }
+
+    public static void save(){
+        File file = new File(dir, "conf.conf");
+        ObjectOutputStream oos = null;
+        try{
+            oos = new ObjectOutputStream(new FileOutputStream(file));
+            oos.writeObject(config);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            if (oos != null) {
+                try {
+                    oos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }
     }
 }

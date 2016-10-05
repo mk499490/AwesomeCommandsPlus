@@ -24,12 +24,4 @@ public class EntityDeathEventHandler {
         }
 
     }
-    /*
-
-    public static Double get(EntityPlayer player) {
-        double deathPoint[] = new double[3];
-
-        return deathPoint;
-    }
-    */
 }

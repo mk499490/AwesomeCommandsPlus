@@ -87,7 +87,6 @@ public class BlockSound extends Block {
             if (meta == 2){
                 player.addChatComponentMessage(new ChatComponentText(LanguageSwitcher.get("text.blockSound.changedToThe3rdSong")));
             }
-            //player.addChatComponentMessage(new ChatComponentText(LanguageSwitcher.get("text.hogehoge")));
         }
 
         return true;
