@@ -1,1 +1,6 @@
 tile.examplemod_myblock.name=マイブロック
+item.examplemod_Original_Sword.name=マイソード
+item.Onigiri.name=おにぎり
+item.PoisonusOnigiri.name=おにぎり?
+tile.examplemodBlockRainbow.name=にじいろぶろっく
+tile.examplemod_blocksound.name=さうんどぶろっく

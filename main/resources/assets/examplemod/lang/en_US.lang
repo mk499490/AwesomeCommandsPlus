@@ -1,1 +1,6 @@
 tile.examplemod_myblock.name=MyBlock
+item.examplemod_Original_Sword.name=MySword
+item.Onigiri.name=Rice Ball
+item.PoisonusOnigiri.name=Rice Ball?
+tile.examplemodBlockRainbow.name=Rainbow Block
+tile.examplemod_blocksound.name=Sound Block
