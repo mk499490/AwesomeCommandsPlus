@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.horizonbagel.awesomecommandsplus;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;

@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.horizonbagel.awesomecommandsplus;
 
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;

@@ -1,11 +1,9 @@
-package com.example.examplemod;
+package com.horizonbagel.awesomecommandsplus;
 
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ChatComponentText;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
 
 /**
  * Created by Owner on 2016/08/11.

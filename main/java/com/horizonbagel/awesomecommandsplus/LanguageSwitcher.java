@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.horizonbagel.awesomecommandsplus;
 
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.entity.player.EntityPlayer;

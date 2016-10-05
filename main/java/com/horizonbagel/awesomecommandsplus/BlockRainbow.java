@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.horizonbagel.awesomecommandsplus;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

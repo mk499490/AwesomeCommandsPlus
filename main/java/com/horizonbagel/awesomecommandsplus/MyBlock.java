@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.horizonbagel.awesomecommandsplus;
 
 /**
  * Created by Owner on 2016/08/08.
