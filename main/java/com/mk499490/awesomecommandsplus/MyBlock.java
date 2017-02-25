@@ -1,4 +1,4 @@
-package com.horizonbagel.awesomecommandsplus;
+package com.mk499490.awesomecommandsplus;
 
 /**
  * Created by Owner on 2016/08/08.
